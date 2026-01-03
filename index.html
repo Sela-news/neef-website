@@ -3,149 +3,266 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEEF – Nnubo Education Empowerment Foundation</title>
-
+<title>NEEF - Nnubo Education Empowerment Foundation</title>
 <style>
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: 
-    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
-    url("assets/neef-bg.png");
-  background-size: cover;
-  background-attachment: fixed;
-  color: #222;
-}
+    /* Dark background with gradient */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #111, #222);
+        color: #eee;
+    }
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 60px 20px 30px;
-}
+    /* Header / Hero Section */
+    header {
+        text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(135deg, #222, #111);
+        position: relative;
+        background-image: url('A_watermark-style_digital_image_for_the_Nnubo_Educ.png'); /* background logo */
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: center top 50px;
+    }
+    header h1 {
+        font-size: 3em;
+        font-weight: bold;
+        color: #FFD700;
+        text-shadow: 2px 2px 5px #000;
+    }
+    header p {
+        font-size: 1.2em;
+        color: #ddd;
+    }
 
-header h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #1b5e20, #2e7d32, #66bb6a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
-}
+    /* Section Styles */
+    section {
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #FFD700;
+        text-shadow: 1px 1px 3px #000;
+    }
 
-header p {
-  max-width: 900px;
-  margin: 15px auto;
-  font-size: 1.1rem;
-}
+    /* About / Vision / Mission / Core Values */
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .card {
+        background: rgba(0,0,0,0.6);
+        border: 1px solid #444;
+        border-radius: 10px;
+        padding: 20px;
+        flex: 1 1 250px;
+        min-width: 250px;
+        max-width: 350px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .card h3 {
+        color: #00FFFF;
+        text-align: center;
+    }
 
-/* SECTIONS */
-section {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(255,255,255,0.85);
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
+    /* Programs */
+    .programs .card h3 {
+        color: #FF69B4;
+    }
 
-/* FORM */
-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-}
+    /* Registration Form */
+    form {
+        background: rgba(0,0,0,0.7);
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 700px;
+        margin: auto;
+    }
+    form input, form select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: none;
+        font-size: 1em;
+    }
+    form button {
+        background: #FFD700;
+        color: #111;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+    form button:hover {
+        background: #FFB700;
+    }
 
-form input, form select, form button {
-  padding: 12px;
-  font-size: 1rem;
-}
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 30px 20px;
+        background: #111;
+        color: #aaa;
+    }
 
-form button {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-form button:hover {
-  background: #1b5e20;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 0.9rem;
-}
+    /* Responsive */
+    @media(max-width:768px){
+        .cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 </style>
 </head>
-
 <body>
 
 <header>
-  <h1>Nnubo Education Empowerment Foundation (NEEF)</h1>
-  <p>
-    Empowering Minds. Transforming Communities.  
-    A legacy-driven educational foundation serving Umunubo and Nkwerre.
-  </p>
+    <h1>NEEF - Nnubo Education Empowerment Foundation</h1>
+    <p>Empowering Minds. Transforming Communities.</p>
 </header>
 
-<section>
-<h2>About NEEF</h2>
-<p>
-NEEF is dedicated to educational excellence, mentorship, skills development,
-and sustainable empowerment for students, teachers, and the wider community.
-</p>
+<section id="about">
+    <h2>About Us</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Vision</h3>
+            <p>To provide access to quality education, innovative learning opportunities, and supportive systems for every child in Nkwerre.</p>
+        </div>
+        <div class="card">
+            <h3>Mission</h3>
+            <p>To enhance the educational landscape through capacity building for educators, student empowerment, and community support.</p>
+        </div>
+        <div class="card">
+            <h3>Core Values</h3>
+            <p>Integrity, Excellence, Innovation, Collaboration, Community Engagement, Sustainability.</p>
+        </div>
+    </div>
 </section>
 
-<section>
-<h2>Registration (Students • Volunteers • Sponsors)</h2>
+<section id="programs">
+    <h2>Our Programs</h2>
+    <div class="cards programs">
+        <div class="card">
+            <h3>Learning Center Initiative</h3>
+            <p>Establishing well-equipped learning centers in elementary and secondary schools with modern facilities.</p>
+        </div>
+        <div class="card">
+            <h3>Teacher Empowerment Program</h3>
+            <p>Training teachers with standardized curriculum tools to enhance literacy, numeracy, and digital skills.</p>
+        </div>
+        <div class="card">
+            <h3>Resource Support</h3>
+            <p>Providing educational materials and resources for students to encourage skill-based learning.</p>
+        </div>
+        <div class="card">
+            <h3>Leadership & Mentorship</h3>
+            <p>Developing leadership programs and pairing students with mentors for personal and professional growth.</p>
+        </div>
+        <div class="card">
+            <h3>Partnership Development</h3>
+            <p>Establishing partnerships with organizations, businesses, and government for program sustainability.</p>
+        </div>
+    </div>
+</section>
 
-<form id="registrationForm">
-  <input type="text" name="fullname" placeholder="Full Name" required>
-  <input type="email" name="email" placeholder="Email Address" required>
+<section id="register">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        <select id="role" name="role" required>
+            <option value="">Select Role</option>
+            <option value="Student">Student</option>
+            <option value="Staff">Staff</option>
+            <option value="Volunteer">Volunteer</option>
+            <option value="Sponsor">Sponsor</option>
+        </select>
+        <select id="town" name="town" required>
+            <option value="">Select Town</option>
+            <option value="Nkwerre">Nkwerre</option>
+            <option value="Amaigbo">Amaigbo</option>
+            <option value="Nnanano">Nnanano</option>
+            <option value="Nnanato">Nnanato</option>
+            <option value="Obinocha">Obinocha</option>
+            <option value="Obinuhu">Obinuhu</option>
+            <option value="Onusa">Onusa</option>
+            <option value="Ugwunagbor">Ugwunagbor</option>
+            <option value="Umugara">Umugara</option>
+            <option value="Unmuko">Unmuko</option>
+            <option value="Amaegbu">Amaegbu</option>
+            <option value="Ezeoha">Ezeoha</option>
+            <option value="Ishiowerre">Ishiowerre</option>
+            <option value="Oforie">Oforie</option>
+            <option value="Okorokparaocha">Okorokparaocha</option>
+            <option value="Uhusieke">Uhusieke</option>
+            <option value="Umuibu">Umuibu</option>
+            <option value="Umuoke">Umuoke</option>
+            <option value="Umuoma">Umuoma</option>
+            <option value="Amano">Amano</option>
+            <option value="Amise">Amise</option>
+            <option value="Aboh">Aboh</option>
+            <option value="Umuagali">Umuagali</option>
+            <option value="Umuegbe">Umuegbe</option>
+            <option value="Umujisi">Umujisi</option>
+            <option value="Umulo">Umulo</option>
+            <option value="Umuokwaranyido">Umuokwaranyido</option>
+            <option value="Umuonyenwere">Umuonyenwere</option>
+            <option value="Unudei">Unudei</option>
+            <option value="Uzii-na Ofeafor">Uzii-na Ofeafor</option>
+            <option value="Agboala">Agboala</option>
+            <option value="Amaorji">Amaorji</option>
+            <option value="Ekiti">Ekiti</option>
+            <option value="Ndimbara‑Umuaro">Ndimbara‑Umuaro</option>
+            <option value="Ofeiye">Ofeiye</option>
+            <option value="Ugwaula">Ugwaula</option>
+            <option value="Umuchoke">Umuchoke</option>
+            <option value="Umudirimo">Umudirimo</option>
+            <option value="Umuduru">Umuduru</option>
+            <option value="Umuduru‑nwanero">Umuduru‑nwanero</option>
+            <option value="Umueluweren">Umueluweren</option>
+            <option value="Umuezeala">Umuezeala</option>
+            <option value="Umunnuhu">Umunnuhu</option>
+            <option value="Umuokwaraurmu">Umuokwaraurmu</option>
+            <option value="Umuozu‑Umuaro">Umuozu‑Umuaro</option>
+        </select>
+        <input type="file" id="photo" name="photo" accept="image/*" capture="user">
+        <button type="submit">Register</button>
+    </form>
+</section>
 
-  <!-- PHONE NUMBER ADDED -->
-  <input type="tel" name="phone" placeholder="Phone Number" required>
-
-  <select name="role" required>
-    <option value="">Select Role</option>
-    <option>Student</option>
-    <option>Volunteer</option>
-    <option>Sponsor</option>
-    <option>Teacher</option>
-  </select>
-
-  <select name="town" required>
-    <option value="">Town / Village (Nkwerre)</option>
-    <option>Umunubo</option>
-    <option>Umudi</option>
-    <option>Nkwerre Town</option>
-    <option>Umukabia</option>
-    <option>Umuelem</option>
-    <option>Umuaka</option>
-    <option>Amankwo</option>
-    <option>Owerre Nkwerre</option>
-  </select>
-
-  <!-- CAMERA OR FILE UPLOAD -->
-  <input 
-    type="file" 
-    accept="image/*" 
-    capture="environment"
-    title="Take photo or upload from device"
-  >
-
-  <button type="submit">Submit Registration</button>
-</form>
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Email</h3>
+            <p>infonefoundation@gmail.com</p>
+        </div>
+    </div>
 </section>
 
 <footer>
-  <p>Contact: infonefoundation@gmail.com</p>
-  <p>&copy; 2026 NEEF. All Rights Reserved.</p>
+    <p>&copy; 2026 NEEF. All Rights Reserved.</p>
 </footer>
+
+<script>
+    // JavaScript for registration submission
+    document.getElementById('registerForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        alert('Registration submitted successfully!');
+        this.reset();
+    });
+</script>
 
 </body>
 </html>
