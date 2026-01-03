@@ -8,97 +8,76 @@
 <style>
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: #f4f6f9;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: 
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    url("assets/neef-bg.png");
+  background-size: cover;
+  background-attachment: fixed;
   color: #222;
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
-  url("logo-bg.png") center/contain no-repeat;
-  padding: 80px 20px;
   text-align: center;
-  color: #fff;
+  padding: 60px 20px 30px;
 }
 
 header h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #1b5e20, #2e7d32, #66bb6a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
 }
 
 header p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: auto;
+  max-width: 900px;
+  margin: 15px auto;
+  font-size: 1.1rem;
 }
 
 /* SECTIONS */
 section {
-  padding: 60px 20px;
   max-width: 1100px;
-  margin: auto;
-}
-
-section h2 {
-  text-align: center;
-  color: #003366;
-  margin-bottom: 30px;
-}
-
-/* PROGRAM GRID */
-.programs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
 /* FORM */
 form {
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  max-width: 700px;
-  margin: auto;
-  box-shadow: 0 4px 15px rgba(0,0,0,.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
 }
 
-label {
-  display: block;
-  margin-top: 15px;
+form input, form select, form button {
+  padding: 12px;
+  font-size: 1rem;
+}
+
+form button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
   font-weight: bold;
 }
 
-input, select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-}
-
-button {
-  margin-top: 25px;
-  width: 100%;
-  padding: 12px;
-  background: #003366;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
+form button:hover {
+  background: #1b5e20;
 }
 
 /* FOOTER */
 footer {
-  background: #003366;
-  color: #fff;
   text-align: center;
   padding: 30px;
+  font-size: 0.9rem;
 }
 </style>
 </head>
@@ -107,71 +86,65 @@ footer {
 
 <header>
   <h1>Nnubo Education Empowerment Foundation (NEEF)</h1>
-  <p>Empowering Minds. Transforming Communities.</p>
+  <p>
+    Empowering Minds. Transforming Communities.  
+    A legacy-driven educational foundation serving Umunubo and Nkwerre.
+  </p>
 </header>
 
 <section>
-  <h2>About NEEF</h2>
-  <p>
-    NEEF is an independent educational charity dedicated to improving
-    literacy, numeracy, leadership and skills development in Umunubo
-    and Nkwerre at large.
-  </p>
+<h2>About NEEF</h2>
+<p>
+NEEF is dedicated to educational excellence, mentorship, skills development,
+and sustainable empowerment for students, teachers, and the wider community.
+</p>
 </section>
 
 <section>
-  <h2>Our Core Programs</h2>
-  <div class="programs">
-    <div class="card">Learning Centers Initiative</div>
-    <div class="card">Teacher Empowerment Program</div>
-    <div class="card">Leadership & Mentorship Academy</div>
-    <div class="card">Scholarships & Skills Training</div>
-    <div class="card">Community & Diaspora Partnerships</div>
-  </div>
-</section>
+<h2>Registration (Students • Volunteers • Sponsors)</h2>
 
-<section>
-  <h2>Registration (Students • Volunteers • Sponsors)</h2>
+<form id="registrationForm">
+  <input type="text" name="fullname" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
 
-  <form>
-    <label>Full Name</label>
-    <input type="text" required>
+  <!-- PHONE NUMBER ADDED -->
+  <input type="tel" name="phone" placeholder="Phone Number" required>
 
-    <label>Email</label>
-    <input type="email" required>
+  <select name="role" required>
+    <option value="">Select Role</option>
+    <option>Student</option>
+    <option>Volunteer</option>
+    <option>Sponsor</option>
+    <option>Teacher</option>
+  </select>
 
-    <label>Category</label>
-    <select required>
-      <option value="">Select one</option>
-      <option>Student</option>
-      <option>Volunteer</option>
-      <option>Sponsor</option>
-      <option>Staff</option>
-    </select>
+  <select name="town" required>
+    <option value="">Town / Village (Nkwerre)</option>
+    <option>Umunubo</option>
+    <option>Umudi</option>
+    <option>Nkwerre Town</option>
+    <option>Umukabia</option>
+    <option>Umuelem</option>
+    <option>Umuaka</option>
+    <option>Amankwo</option>
+    <option>Owerre Nkwerre</option>
+  </select>
 
-    <label>Town / Village (Nkwerre)</label>
-    <select required>
-      <option value="">Select village</option>
-      <option>Umunubo</option>
-      <option>Amakohia</option>
-      <option>Umudi</option>
-      <option>Eziama</option>
-      <option>Umukor</option>
-      <option>Owerre-Nkworji</option>
-      <option>Nkwerre Central</option>
-      <option>Umuezeala</option>
-    </select>
+  <!-- CAMERA OR FILE UPLOAD -->
+  <input 
+    type="file" 
+    accept="image/*" 
+    capture="environment"
+    title="Take photo or upload from device"
+  >
 
-    <label>Upload Photograph</label>
-    <input type="file" accept="image/*">
-
-    <button type="submit">Submit Registration</button>
-  </form>
+  <button type="submit">Submit Registration</button>
+</form>
 </section>
 
 <footer>
-  <p>📧 infonefoundation@gmail.com</p>
-  <p>© 2026 NEEF – All Rights Reserved</p>
+  <p>Contact: infonefoundation@gmail.com</p>
+  <p>&copy; 2026 NEEF. All Rights Reserved.</p>
 </footer>
 
 </body>
