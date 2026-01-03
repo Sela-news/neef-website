@@ -1,168 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEEF – Nnubo Education Empowerment Foundation</title>
 
-  <title>
-    NEEF – Nnubo Education Empowerment Foundation | Empowering Minds, Transforming Communities
-  </title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+  color: #222;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url("assets/neef-bg.png") no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-    }
+/* HEADER */
+header {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+  url("logo-bg.png") center/contain no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: rgba(0, 64, 128, 0.85);
-    }
+header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
 
-    header h1 {
-      margin-bottom: 10px;
-      font-size: 2rem;
-    }
+header p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
 
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-      background: rgba(255,255,255,0.95);
-      color: #000;
-      border-radius: 10px;
-    }
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    h2 {
-      color: #004080;
-    }
+section h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+}
 
-    label {
-      font-weight: bold;
-    }
+/* PROGRAM GRID */
+.programs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    input, select, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-    }
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
 
-    button {
-      background-color: #004080;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+/* FORM */
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
 
-    button:hover {
-      background-color: #002f5f;
-    }
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
 
-    img {
-      border: 1px solid #ccc;
-      padding: 5px;
-    }
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
 
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 64, 128, 0.9);
-      color: white;
-    }
-  </style>
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: #003366;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Nnubo Education Empowerment Foundation (NEEF)</h1>
-  <p>Empowering Minds · Transforming Communities</p>
+  <p>Empowering Minds. Transforming Communities.</p>
 </header>
 
-<main>
+<section>
+  <h2>About NEEF</h2>
+  <p>
+    NEEF is an independent educational charity dedicated to improving
+    literacy, numeracy, leadership and skills development in Umunubo
+    and Nkwerre at large.
+  </p>
+</section>
 
-  <section>
-    <h2>About NEEF</h2>
-    <p>
-      NEEF is a community-driven educational empowerment initiative committed to
-      restoring academic excellence, developing leadership, and breaking the cycle
-      of poverty through sustainable education in Umunubo and Nkwerre at large.
-    </p>
-  </section>
+<section>
+  <h2>Our Core Programs</h2>
+  <div class="programs">
+    <div class="card">Learning Centers Initiative</div>
+    <div class="card">Teacher Empowerment Program</div>
+    <div class="card">Leadership & Mentorship Academy</div>
+    <div class="card">Scholarships & Skills Training</div>
+    <div class="card">Community & Diaspora Partnerships</div>
+  </div>
+</section>
 
-  <hr>
+<section>
+  <h2>Registration (Students • Volunteers • Sponsors)</h2>
 
-  <section>
-    <h2>Registration Portal</h2>
+  <form>
+    <label>Full Name</label>
+    <input type="text" required>
 
-    <form id="registrationForm">
+    <label>Email</label>
+    <input type="email" required>
 
-      <label>Full Name</label>
-      <input type="text" id="name" required>
+    <label>Category</label>
+    <select required>
+      <option value="">Select one</option>
+      <option>Student</option>
+      <option>Volunteer</option>
+      <option>Sponsor</option>
+      <option>Staff</option>
+    </select>
 
-      <label>Email Address</label>
-      <input type="email" id="email" value="infonefoundation@gmail.com" required>
+    <label>Town / Village (Nkwerre)</label>
+    <select required>
+      <option value="">Select village</option>
+      <option>Umunubo</option>
+      <option>Amakohia</option>
+      <option>Umudi</option>
+      <option>Eziama</option>
+      <option>Umukor</option>
+      <option>Owerre-Nkworji</option>
+      <option>Nkwerre Central</option>
+      <option>Umuezeala</option>
+    </select>
 
-      <label>Registering As</label>
-      <select id="role" required>
-        <option value="">Select</option>
-        <option>Student</option>
-        <option>Teacher</option>
-        <option>Sponsor</option>
-        <option>Volunteer</option>
-      </select>
+    <label>Upload Photograph</label>
+    <input type="file" accept="image/*">
 
-      <label>Town / Village</label>
-      <select id="town" required>
-        <option value="">Select your town</option>
-        <option>Nkwerre</option>
-        <option>Umunubo</option>
-        <option>Amakohia</option>
-        <option>Umuapu</option>
-        <option>Emii</option>
-        <option>Other</option>
-      </select>
-
-      <label>Upload Photograph</label>
-      <input type="file" accept="image/*" onchange="previewPhoto(event)">
-
-      <img id="photoPreview" style="max-width:200px; display:none;">
-
-      <button type="submit">Submit Registration</button>
-
-    </form>
-
-    <p id="message" style="color:green;font-weight:bold;"></p>
-  </section>
-
-  <hr>
-
-  <section>
-    <h2>Programs & Opportunities</h2>
-    <ul>
-      <li>Student Scholarships & Learning Centers</li>
-      <li>Teacher Training & Capacity Building</li>
-      <li>Leadership & Mentorship Programs</li>
-      <li>Sponsorship & Community Partnerships</li>
-    </ul>
-  </section>
-
-</main>
+    <button type="submit">Submit Registration</button>
+  </form>
+</section>
 
 <footer>
-  <p>Contact: infonefoundation@gmail.com</p>
-  <p>© 2026 Nnubo Education Empowerment Foundation</p>
+  <p>📧 infonefoundation@gmail.com</p>
+  <p>© 2026 NEEF – All Rights Reserved</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
